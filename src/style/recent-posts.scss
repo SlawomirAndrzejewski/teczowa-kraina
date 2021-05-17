@@ -1,0 +1,89 @@
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+.recent-posts {
+    position: relative;
+    background: radial-gradient(49.93% 49.93% at 50% 50.07%, rgba(207, 246, 255, 0.12) 0%, rgba(31, 195, 232, 0.38) 86.82%);
+    .glide {
+        margin: 0 auto;
+        max-width: 1124px;
+    }
+    .recent-post {
+        position: relative;
+        padding: 25px 30px 25px 30px;
+        background: #FFF;
+        width: 330px;
+        height: 450px;
+        margin: 15vw auto;
+        .post-title {
+            text-transform: uppercase;
+            font-size: 28px;
+            color: #1A1A1A;
+        }
+        .decor-line {
+            margin: 15px 0 20px 0;
+            width: 200px;
+            height: 5px;
+            background: #FF096B;
+        }
+        .about-post {
+            font-size: 18px;
+            line-height: 28px;
+            color: #1A1A1A;
+            // letter-spacing: 1.8px;
+            // text-align: justify;
+        }
+        .read-more {
+            position: absolute;
+            bottom: 10px;
+            left: calc(50% - 42.5px);
+            display: block;
+            padding: 20px 0 0 0;
+            text-align: center;
+            color: #1A1A1A;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            transition: .1s linear;
+            font-family: 'Roboto Condensed', sans-serif;
+            &:hover {
+                color: #FF096B;
+            }
+        }
+    }
+    .controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+        button {
+            background-color: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            cursor: pointer;
+            color: #FFF;
+        }
+    }
+}
+ 
+
+@media screen and (min-width: 1024px) {
+    .recent-posts {
+        .recent-post {
+            margin: 5vw auto;
+            .controls {
+                bottom: 50%;
+                left: -88px;
+                width: 1300px;
+                button {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}

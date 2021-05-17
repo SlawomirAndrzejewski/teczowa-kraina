@@ -1,0 +1,25 @@
+<IfModule mod_security2.c>
+SecRuleRemoveById 981243
+SecRuleRemoveById 981318
+</IfModule>
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/$
+RewriteCond %{QUERY_STRING} ^(gclid=.*)
+RewriteRule ^(.*)$ /index.php?/ [L,PT]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
